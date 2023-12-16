@@ -2,7 +2,15 @@ variable "name" {}
 
 variable "backend" {}
 
-variable "policy_definitions" {}
+variable "policies" {
+  type = list(string)
+  default = []
+}
+
+variable "policy_definitions" {
+  type = list(string)
+  default = null
+}
 
 variable "role_type" {
   default = "jwt"
