@@ -5,6 +5,7 @@ variable "backend" {}
 variable "policies" {
   type = list(string)
   default = []
+  nullable = false
 }
 
 variable "policy_definitions" {
@@ -14,14 +15,17 @@ variable "policy_definitions" {
 
 variable "role_type" {
   default = "jwt"
+  nullable = false
 }
 
 variable "user_claim" {
   default = "actor"
+  nullable = false
 }
 
 variable "bound_claims" {}
 
 variable "token_ttl" {
   default = 3600
+  nullable = false
 }
