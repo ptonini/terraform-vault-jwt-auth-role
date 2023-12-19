@@ -23,7 +23,9 @@ variable "user_claim" {
   nullable = false
 }
 
-variable "bound_claims" {}
+variable "bound_claims" {
+  type = map(string)
+}
 
 variable "token_ttl" {
   default = 3600
